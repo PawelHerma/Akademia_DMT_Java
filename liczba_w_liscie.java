@@ -30,5 +30,6 @@ public class liczba_w_liscie
         else{
             System.out.println("Liczba nie znajduje sie na liscie");
         }
+        input.close();
     }    
 }
