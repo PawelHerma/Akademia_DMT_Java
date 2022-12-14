@@ -1,3 +1,4 @@
+package Zadania_z_kolokwium;
 // Dana jest lista liczb naturalnych [1,2,3,4,5,6,7,8,9,10,11,12]. 
 // Program prosi użytkownika o podanie dowolnej liczby,
 // jeżeli podana przez użytkownika liczba znajduje się na liście,

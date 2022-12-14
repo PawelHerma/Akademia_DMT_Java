@@ -1,3 +1,4 @@
+package Zadania_z_kolokwium;
 // Program prosi użytkownika o podanie dowolnej liczby naturalnej. 
 // Jeżeli użytkownik poda złą liczbę, to wyświetla się komunikat “Haha, nie zgadłeś” 
 // oraz kolejny raz wyświetla się prośba o podanie dowolnej liczby naturalnej.

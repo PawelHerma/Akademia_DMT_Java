@@ -1,3 +1,4 @@
+package Zadania_z_kolokwium;
 // Słabnią nazywamy sumę kolejnych liczb naturalnych nieprzekraczających n. 
 // n?=1+2+3+...n
 // Napisz program, który pobiera od użytkownika liczbę n, a następnie wypisuje na ekranie 

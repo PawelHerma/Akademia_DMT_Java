@@ -1,3 +1,4 @@
+package Zadania_z_kolokwium;
 // Program prosi użytkownika o podanie łańcucha składającego się z 10 znaków. 
 // Jeżeli użytkownik poda właściwą długość łańcucha, 
 // to na ekranie wyświetli się komunikat “Poprawna długość łańcucha” 

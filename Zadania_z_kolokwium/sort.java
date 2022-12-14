@@ -1,3 +1,4 @@
+package Zadania_z_kolokwium;
 // Dana jest lista [-3,0,56,12,-23,45,10,8]
 // Napisz program, który wyświetli na ekranie największą liczbę z podanej listy.
 
