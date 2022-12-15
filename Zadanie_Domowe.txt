@@ -1,0 +1,19 @@
+1) Jak dzielimy zmienne w Javie
+
+Odp. Zmienne w Javie dzielimy na:
+    - zmienne liczbowe: int, float, double
+    - zmienne logiczne: boolean
+    - zmienne znakowe: char, String
+
+2) Skąd wynika pisanie Stringa wielką literą
+
+Odp. Robimy tak, ponieważ String jest klasą a nie zwykłym typem wartości, a w konwecji pisania kodu klasy zapisywane są z wielkiej litery
+
+3) Jakie są wielkości poszczególnych typów danych i zakresy ich wartości możliwych do przechowywania
+
+Odp.
+    - int - 4 bajty - wartości od -2,147,483,648 do 2,147,483,647
+    - float - 4 bajty - wartości do 7 miejsc po przecinku
+    - double - 8 bajtów - wartości do 15 miejsc po przecinku
+    boolean - 1 bit - true(1) albo false(0)
+    char - 2 bajty - jeden znak w kodzie ASCII
