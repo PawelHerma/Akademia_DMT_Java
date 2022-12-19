@@ -39,9 +39,9 @@ public class Complex
     }
 
     //wypisuje liczbe urojona w postaci 'a + bi'
-    public void print(Complex complex)
+    public void print()
     {
-        System.out.print(complex.re + " + " + complex.im + "i");
+        System.out.print(this.re + " + " + this.im + "i");
     }
 
     //zwraca modul liczby zespolonej
