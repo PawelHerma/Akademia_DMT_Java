@@ -1,3 +1,5 @@
+import javax.lang.model.util.ElementScanner6;
+
 public class Complex 
 {
     private int re;
@@ -40,7 +42,12 @@ public class Complex
     //wypisuje liczbe urojona w postaci 'a + bi'
     public void print()
     {
-        System.out.print(this.re + " + " + this.im + "i");
+        if ( this.im == 0 )
+            System.out.print( this.re );
+        else if (this.im < 0)
+            System.out.print( this.re + " - " + (-this.im) + "i" );
+        else
+            System.out.print(this.re + " + " + this.im + "i");
     }
 
     //zwraca modul liczby zespolonej
@@ -52,8 +59,8 @@ public class Complex
     //zwraca sprzezenie liczby zespolonej
     public Complex conj()
     {
-        Complex com = new Complex ( this.re, -this.im );
-        return com;
+        this.im = -this.im;
+        return this;
     }
 
     //metody statyczne
@@ -61,38 +68,34 @@ public class Complex
     //zwraca sume dwoch liczb urojonych
     public static Complex add ( Complex a, Complex b )
     {
-        Complex com = new Complex ( a.re + b.re, a.im + b.im );
-        return com;
+        return new Complex ( a.re + b.re, a.im + b.im );
     }
 
     //zwraca roznice dwoch liczb urojonych
     public static Complex diff ( Complex a, Complex b )
     {
-        Complex com = new Complex ( a.re - b.re, a.im - b.im );
-        return com;
+        return new Complex ( a.re - b.re, a.im - b.im );
     }
 
     //zwraca iloczyn dwoch liczb urojonych
     public static Complex prod ( Complex a, Complex b )
     {
-        Complex com = new Complex ( a.re * b.re + a.im + b.im, a.re * b.im - a.im * b.re );
-        return com;
+        return new Complex ( a.re * b.re + a.im + b.im, a.re * b.im - a.im * b.re );
     }
 
     //zwraca iloraz dwoch liczb urojonych
     public static Complex div ( Complex a, Complex b )
     {
-        Complex com = new Complex ( 
+        return new Complex ( 
             (a.re*b.re + a.im*b.im) / (b.re^2 + b.im^2) ,
             (a.im*b.re - a.re*b.im) / (b.re^2 + b.im^2)
             );
-        return com;
     }
 
     //sprawdza, czy podane liczby zespolone sa sobie rowne
     public static boolean equal ( Complex a, Complex b )
     {
-        if ( a.re == b.re && a.im == b.im )
+        if ( a == b )
             return true;
         else
             return false;
