@@ -45,13 +45,13 @@ public class Complex
         else if (this.im < 0)
             System.out.print( this.re + " - " + (-this.im) + "i" );
         else
-            System.out.print(this.re + " + " + this.im + "i");
+            System.out.print( this.re + " + " + this.im + "i" );
     }
 
     //zwraca modul liczby zespolonej
     public double mod()
     {
-        return Math.sqrt(this.re*this.re + this.im*this.im);
+        return Math.sqrt( this.re*this.re + this.im*this.im );
     }
 
     //zwraca sprzezenie liczby zespolonej
