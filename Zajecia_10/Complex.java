@@ -12,9 +12,8 @@ public class Complex
     //prywatny kontruktor
     private Complex( int re , int im )
     {
-        Complex complex = new Complex() ;
-        complex.re = re;
-        complex.im = im;
+        this.re = re;
+        this.im = im;
     }
 
     // ustawienie czesci liczby urojonej
