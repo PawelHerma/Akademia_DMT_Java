@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Complex 
 {
     private int re;
@@ -12,11 +14,20 @@ public class Complex
     //prywatny kontruktor
     private Complex( int re , int im )
     {
-        this.re = re;
-        this.im = im;
+        this.set( re, im );
     }
 
-    // ustawienie czesci liczby urojonej
+    //prywatny konstruktor ze stringa
+    public Complex( String liczba )
+    {
+        Scanner input = new Scanner(liczba);
+        input.useDelimiter("\\D+");
+        this.re = input.nextInt();
+        this.im = input.nextInt();
+        input.close();
+    }
+
+    //ustawienie czesci liczby urojonej
     public void set( int re, int im )
     {
         this.re = re;
