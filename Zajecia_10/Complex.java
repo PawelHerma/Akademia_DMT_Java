@@ -44,15 +44,15 @@ public class Complex
     }
 
     //zwraca modul liczby zespolonej
-    public double mod ( Complex complex )
+    public double mod()
     {
-        return Math.sqrt(complex.re^2 + complex.im^2);
+        return Math.sqrt(this.re*this.re + this.im*this.im);
     }
 
     //zwraca sprzezenie liczby zespolonej
-    public Complex conj ( Complex complex )
+    public Complex conj()
     {
-        Complex com = new Complex ( complex.re, -complex.im );
+        Complex com = new Complex ( this.re, -this.im );
         return com;
     }
 

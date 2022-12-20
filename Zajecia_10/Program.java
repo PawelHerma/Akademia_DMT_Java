@@ -4,6 +4,7 @@ public class Program
     {
         Complex liczba = new Complex();
         liczba.set(2,2);
-        liczba.print();
+        System.out.println( liczba.mod() );
+        liczba.conj().print();
     }    
 }
