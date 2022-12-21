@@ -23,6 +23,7 @@ public class Complex
         this.setFromText(liczba);
     }
 
+    //ustawienie czesci liczby urojonej z podanego tekstu
     public void setFromText( String liczba )
     {
         Scanner input = new Scanner(liczba);
