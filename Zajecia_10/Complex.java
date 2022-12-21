@@ -18,7 +18,12 @@ public class Complex
     }
 
     //prywatny konstruktor ze stringa
-    public Complex( String liczba )
+    private Complex( String liczba )
+    {
+        this.setFromText(liczba);
+    }
+
+    public void setFromText( String liczba )
     {
         Scanner input = new Scanner(liczba);
         input.useDelimiter("\\D+");
@@ -52,11 +57,11 @@ public class Complex
     public void print()
     {
         if ( this.im == 0 )
-            System.out.print( this.re );
+            System.out.println( this.re );
         else if (this.im < 0)
-            System.out.print( this.re + " - " + (-this.im) + "i" );
+            System.out.println( this.re + " - " + (-this.im) + "i" );
         else
-            System.out.print( this.re + " + " + this.im + "i" );
+            System.out.println( this.re + " + " + this.im + "i" );
     }
 
     //zwraca modul liczby zespolonej

@@ -4,9 +4,13 @@ public class Program
     {
         Complex liczba = new Complex();
         liczba.set(2,2);
-        Complex tekst = new Complex("3 + 3i");
-        tekst.print();
-        System.out.println( liczba.mod() );
-        liczba.conj().print();
+        String tekst = "3 + 5i";
+        Complex liczba_z_tekstu = new Complex();
+        liczba_z_tekstu.setFromText(tekst);
+        liczba_z_tekstu.print();
+        System.out.println( liczba_z_tekstu.mod() );
+        liczba_z_tekstu.conj().print();
+        System.out.print( "Suma dwoch liczb ");
+        Complex.add(liczba, liczba_z_tekstu).print();
     }    
 }
