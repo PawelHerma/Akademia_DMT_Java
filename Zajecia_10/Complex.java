@@ -20,12 +20,6 @@ public class Complex
     //prywatny konstruktor ze stringa
     private Complex( String liczba )
     {
-        this.setFromText(liczba);
-    }
-
-    //ustawienie czesci liczby urojonej z podanego tekstu
-    public void setFromText( String liczba )
-    {
         Scanner input = new Scanner(liczba);
         input.useDelimiter("\\D+");
         this.re = input.nextInt();
