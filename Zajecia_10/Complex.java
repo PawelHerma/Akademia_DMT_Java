@@ -18,12 +18,20 @@ public class Complex
     }
 
     //prywatny konstruktor ze stringa
-    private Complex( String liczba )
+    public Complex( String liczba )
     {
-        Scanner input = new Scanner(liczba);
-        input.useDelimiter("\\D+");
-        this.re = input.nextInt();
-        this.im = input.nextInt();
+        CheckString(liczba);
+    }
+
+    // walidacja danych użytkownika
+    private void CheckString( String dane )
+    {
+        String pomoc = dane;
+        Scanner input = new Scanner(pomoc);
+
+        //to do: odosobnić każdy schemat zapisu liczby i odpowiednio dopasować konstruktor
+
+        pomoc.matches("(([\\+-]?[\\D]+([\\.][\\D]+)?)?([eE][\\+-]?[\\D]+)?)?(([\\+-])?(([\\D]+?([\\.][\\D]+)?)?([eE]?[\\+-]?[\\D]+)?)?[iI])?");
         input.close();
     }
 
