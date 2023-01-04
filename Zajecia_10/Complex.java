@@ -29,9 +29,16 @@ public class Complex
         String pomoc = dane;
         Scanner input = new Scanner(pomoc);
 
-        //to do: odosobnić każdy schemat zapisu liczby i odpowiednio dopasować konstruktor
+        //to do: odpowiednie regexy
+        
+        if ( pomoc.matches("a +- bi") )
+        {
 
-        pomoc.matches("(([\\+-]?[\\D]+([\\.][\\D]+)?)?([eE][\\+-]?[\\D]+)?)?(([\\+-])?(([\\D]+?([\\.][\\D]+)?)?([eE]?[\\+-]?[\\D]+)?)?[iI])?");
+        }
+        else if ( pomoc.matches("") )
+        {
+
+        }
         input.close();
     }
 
