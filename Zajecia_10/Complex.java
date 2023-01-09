@@ -41,6 +41,8 @@ public class Complex
         }
         input.close();
     }
+    
+    //metody
 
     //ustawienie czesci liczby urojonej
     public void set( int re, int im )
@@ -54,8 +56,6 @@ public class Complex
     {
         return this.re;
     }
-
-    //metody
 
     //zwraca czesc urojona liczby urojonej
     public int getIm()
