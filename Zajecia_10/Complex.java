@@ -41,7 +41,7 @@ public class Complex
         }
         input.close();
     }
-    
+
     //metody
 
     //ustawienie czesci liczby urojonej
@@ -104,7 +104,7 @@ public class Complex
     //zwraca iloczyn dwoch liczb urojonych
     public static Complex prod ( Complex a, Complex b )
     {
-        return new Complex ( a.re * b.re + a.im + b.im, a.re * b.im - a.im * b.re );
+        return new Complex ( a.re * b.re + a.im * b.im, a.re * b.im - a.im * b.re );
     }
 
     //zwraca iloraz dwoch liczb urojonych
