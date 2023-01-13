@@ -4,7 +4,7 @@ public class Program
     {
         Powtorka.liczDoFor(5);
         boolean czyJest = Powtorka.jestPalindromem("oko");
-        System.out.print(czyJest);
+        System.out.println(czyJest);
 
         Complex liczba = new Complex();
         liczba.set(2,-2);
