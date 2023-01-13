@@ -1,3 +1,4 @@
+//deklaracja klasy
 public class Powtorka 
 {
     //wypisz kolejne liczby naturalne za pomoca petli for()

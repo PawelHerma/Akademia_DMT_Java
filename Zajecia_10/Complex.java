@@ -1,8 +1,11 @@
+//biblioteki potrzebne do walidacji danych
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//deklaracja klasy
 public class Complex 
 {
+    //prywatne zmienne
     private int re;
     private int im;
 
