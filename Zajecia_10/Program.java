@@ -9,5 +9,9 @@ public class Program
         Complex liczba = new Complex();
         liczba.set(2,-2);
         liczba.print();
+
+
+        Complex liczbaZtekstu = new Complex("2+3i");
+        liczbaZtekstu.print();
     }    
 }

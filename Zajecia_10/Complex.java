@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.regex.*;
 
 public class Complex 
 {
@@ -20,26 +21,33 @@ public class Complex
     //prywatny konstruktor ze stringa
     public Complex( String liczba )
     {
-        CheckString(liczba);
+        if(CheckString(liczba))
+        {
+            Scanner input = new Scanner(liczba);
+            this.re = input.nextInt();
+            this.im = input.nextInt();
+            input.close();
+        }
+        else
+        {
+            System.out.println("ERROR: Wrong data");
+        }
     }
 
     // walidacja danych użytkownika
-    private void CheckString( String dane )
+    private boolean CheckString( String dane )
     {
         String pomoc = dane;
-        Scanner input = new Scanner(pomoc);
-
-        //to do: odpowiednie regexy
+        String regex = "^[0-9]{0,}\\+[0-9]{0,}i$";
         
-        if ( pomoc.matches("a +- bi") )
+        if ( pomoc.matches(regex) )
         {
-
+            return true;
         }
-        else if ( pomoc.matches("") )
+        else
         {
-
+            return false;
         }
-        input.close();
     }
 
     //metody
