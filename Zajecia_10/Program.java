@@ -11,7 +11,7 @@ public class Program
         liczba.print();
 
 
-        Complex liczbaZtekstu = new Complex("2+3i");
+        Complex liczbaZtekstu = new Complex("2 - 3i");
         liczbaZtekstu.print();
     }    
 }

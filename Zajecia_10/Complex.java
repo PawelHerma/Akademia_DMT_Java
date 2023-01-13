@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Complex 
 {
@@ -21,32 +21,34 @@ public class Complex
     //prywatny konstruktor ze stringa
     public Complex( String liczba )
     {
-        if(CheckString(liczba))
-        {
-            Scanner input = new Scanner(liczba);
-            this.re = input.nextInt();
-            this.im = input.nextInt();
-            input.close();
-        }
-        else
-        {
-            System.out.println("ERROR: Wrong data");
-        }
-    }
-
-    // walidacja danych użytkownika
-    private boolean CheckString( String dane )
-    {
-        String pomoc = dane;
-        String regex = "^[0-9]{0,}\\+[0-9]{0,}i$";
         
-        if ( pomoc.matches(regex) )
+        String liczbaBezSpacji = liczba.replaceAll("\\s","");
+
+        // Pattern A - a +/- bi
+        Pattern patternA = Pattern.compile("([-]?[0-9]+\\.?[0-9]?)([-|+]+[0-9]+\\.?[0-9]?)[i$]+");
+        // Pattern B - tylko część rzeczywista
+        Pattern patternB = Pattern.compile("([-]?[0-9]+\\.?[0-9]?)$");
+        // Pattern C - tylko część urojona
+        Pattern patternC = Pattern.compile("([-]?[0-9]+\\.?[0-9]?)[i$]");
+
+        Matcher matcherA = patternA.matcher(liczbaBezSpacji);
+        Matcher matcherB = patternB.matcher(liczbaBezSpacji);
+        Matcher matcherC = patternC.matcher(liczbaBezSpacji);
+
+        if (matcherA.find()) 
         {
-            return true;
-        }
-        else
+            this.re = Integer.parseInt(matcherA.group(1));
+            this.im = Integer.parseInt(matcherA.group(2));
+        } 
+        else if (matcherB.find()) 
         {
-            return false;
+            this.re = Integer.parseInt(matcherB.group(1));
+            this.im = 0;
+        } 
+        else if (matcherC.find()) 
+        {
+            this.re = 0;
+            this.im = Integer.parseInt(matcherC.group(1));
         }
     }
 
